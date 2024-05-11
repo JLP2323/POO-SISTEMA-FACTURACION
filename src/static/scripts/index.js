@@ -1,28 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+import { MethodsModular } from "src/classes/classModularMethods.js";
 
-    const btn_Clientes = document.getElementById("btn-Clientes");
-    const showSaludo = document.getElementById("showSaludo");
+// Crear una instancia de MethodsModular
+const methodsModularInstance = new MethodsModular();
 
-    const btn_Producto = document.getElementById("btn-Producto");
-    const showSaludoProducto = document.getElementById("showSaludoP");
+document.addEventListener('DOMContentLoaded', function () {
+    const formClient = document.getElementById("formClient");
 
-    
-     
+    formClient.addEventListener('submit', function (event) {
+        event.preventDefault();
+        methodsModularInstance.resetForm(formClient);
 
-
-    // funtion modular
-    function show(showMassage){
-        showMassage.style.display = "block"
-    }
-
-    btn_Clientes.addEventListener('click', function(event){
-        event.preventDefault()
-        show(showSaludo)
+        // formClient.submit();
     });
-
-    btn_Producto.addEventListener('click', function(event){
-        event.preventDefault()
-        show(showSaludoProducto)
-    });
-
 });

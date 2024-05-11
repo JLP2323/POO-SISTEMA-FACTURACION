@@ -10,61 +10,77 @@
 
 <body>
 
-    <header>
-        <h1>WEB DE FACTURACIÓN</h1>
-        <nav>
-            <ul>
-                <li><button onclick="showSection('containerClientes')">Clientes</button></li>
-                <li><button onclick="showSection('containerProductos')">Productos</button></li>
-                <li><button onclick="showSection('containerFactura')">Facturar</button></li>
+<header>
+    <h1>WEB DE FACTURACIÓN</h1>
+    <nav>
+        <ul>
+            <li>
+                <button onclick="showSection('containerClientes')">Clientes</button>
+            </li>
+            <li>
+                <button onclick="showSection('containerProductos')">Productos</button>
+            </li>
+            <li>
+                <button onclick="showSection('containerFactura')">Facturar</button>
+            </li>
 
-            </ul>
-        </nav>
-    </header>
+        </ul>
+    </nav>
+</header>
 
-    <main>
-        <section class="containerClientes" id="containerClientes">
+<main>
 
-            <!-- dentro de cada section entraria cada formulario -->
+    <section class="containerClientes" id="containerClientes">
+<!--   prueba Pycharm puedo trabajar con las R3-->
+        <!-- EJEMPLO -->
+        <h1>Clientes</h1>
+        <form class="formClient" id="formClient">
+            <input type="text" class="nameUser" id="nameUser">
+            <button type="submit" class="btnSaveClient" id="btnSaveClient">Save</button>
+        </form>
 
-            <!-- EJEMPLO -->
-            <h2>Clientes</h2>
-            <div class="showSaludo" id="showSaludo"> Hola mundo!</div>
-            <button type="button" class="btn-Clientes" id="btn-Clientes">Cliente</button>
+    </section>
 
+    <section class="containerProductos" id="containerProductos">
 
-        </section>
+        <!-- EJEMPLO -->
+        <h2>Productos</h2>
+        <form class="formProduct" id="formProduct">
+            <input type="text" class="nameProduct" id="nameProduct">
+            <button type="submit" class="btnSaveProduct" id="btnSaveProduct">SaveProduct</button>
+        </form>
 
-        <section class="containerProductos" id="containerProductos">
+    </section>
 
-            <!-- EJEMPLO -->
-            <h2>Productos</h2>
-            <div class="showSaludoP" id="showSaludoP"> Hola producto!</div>
-            <button type="button" class="btn-Producto" id="btn-Producto">Producto</button>
-        
-        
-        </section>
+    <section class="containerInvoice" id="containerInvoice">
+        <!-- EJEMPLO -->
 
-        <section class="containerFactura" id="containerFactura">
-            <h2>Facturar</h2>
-        </section>
-    </main>
+        <h2>Facturar</h2>
+        <form class="formInvoice" id="formInvoice">
+            <input type="text" class="nameInvoice" id="nameInvoice">
+            <button type="submit" class="btnSaveInvoice" id="btnSaveInvoice">SaveInvoice</button>
+        </form>
 
-    <footer>
-        <p>&copy; 2024 Nombre de tu empresa</p>
-    </footer>
+    </section>
 
-    <script src="/src/static/scripts/index.js"></script>
+</main>
 
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('main section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-        showSection('containerClientes');
-    </script>
+<footer>
+    <p>&copy; 2024 Nombre de tu empresa</p>
+</footer>
+
+<script src="/src/static/scripts/index.js"></script>
+
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('main section').forEach(section => {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    showSection('containerClientes');
+</script>
 
 </body>
 
