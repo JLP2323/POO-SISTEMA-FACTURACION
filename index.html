@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/static/styles/index.css">
+    <title>Web Facturación</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>WEB DE FACTURACIÓN</h1>
+        <nav>
+            <ul>
+                <li><button onclick="showSection('containerClientes')">Clientes</button></li>
+                <li><button onclick="showSection('containerProductos')">Productos</button></li>
+                <li><button onclick="showSection('containerFactura')">Facturar</button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="containerClientes" id="containerClientes">
+
+            <!-- dentro de cada section entraria cada formulario -->
+
+            <!-- EJEMPLO -->
+            <h2>Clientes</h2>
+            <div class="showSaludo" id="showSaludo"> Hola mundo!</div>
+            <button type="button" class="btn-Clientes" id="btn-Clientes">Cliente</button>
+
+
+        </section>
+
+        <section class="containerProductos" id="containerProductos">
+
+            <!-- EJEMPLO -->
+            <h2>Productos</h2>
+            <div class="showSaludoP" id="showSaludoP"> Hola producto!</div>
+            <button type="button" class="btn-Producto" id="btn-Producto">Producto</button>
+        
+        
+        </section>
+
+        <section class="containerFactura" id="containerFactura">
+            <h2>Facturar</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nombre de tu empresa</p>
+    </footer>
+
+    <script src="/src/static/scripts/index.js"></script>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+        showSection('containerClientes');
+    </script>
+
+</body>
+
+</html>
