@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/elaadmin-master/assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="/elaadmin-master/assets/css/style.css">
     <link rel="stylesheet" href="/elaadmin-master/assets/css/lib/chosen/chosen.min.css">
@@ -22,53 +22,26 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <title>Web Facturación</title>
-    <style>
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li button {
-            background-color: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 5px 10px;
-        }
-        nav ul li button:hover {
-            background-color: #555;
-        }
-    </style>
+
 </head>
 
 <body>
 
 <header>
-    <h3>WEB DE FACTURACIÓN</h1>
-    <nav>
-        <ul>
-            <li>
-                <button onclick="showSection('containerClientes')">Clientes</button>
-            </li>
-            <li>
-                <button onclick="showSection('containerProductos')">Productos</button>
-            </li>
-            <li>
-                <button onclick="showSection('containerInvoice')">Facturar</button>
-            </li>
-
-        </ul>
-    </nav>
+    <h3 style="font-size: 25px;">WEB DE FACTURACIÓN</h1>
+        <nav>
+            <ul>
+                <li>
+                    <button data-section-id="containerClientes">Clientes</button>
+                </li>
+                <li>
+                    <button data-section-id="containerProductos">Productos</button>
+                </li>
+                <li>
+                    <button data-section-id="containerInvoice">Facturar</button>
+                </li>
+            </ul>
+        </nav>
 </header>
 
 <main>
@@ -76,7 +49,7 @@
     <section class="containerClientes" id="containerClientes">
 
         <div class="col-xs-3 col-sm-3">
-            <div class="card">
+            <div class="card top">
                 <div class="card-header">
                     <strong>Registar</strong> <small> Clientes Regulares</small>
                 </div>
@@ -85,31 +58,31 @@
                     <div class="form-group">
                         <label class=" form-control-label">Cédula</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-id-card"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">ex. 0123456789</small>
                     </div>
                     <div class="form-group">
-                        <label class=" form-control-label">Nombres Completos</label>
+                        <label class=" form-control-label">Nombres y Apellidos</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-user-plus"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
-                        <small class="form-text text-muted">ex. Eduardo Javier</small>
+                        <small class="form-text text-muted">ex. Eduardo Javier Quinteros Pacheco</small>
                     </div>
                     <div class="form-group">
-                        <label class=" form-control-label">Apellidos Completos</label>
+                        <label class=" form-control-label">Correo Electronico</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
-                        <small class="form-text text-muted">ex. Quinteros Pacheco</small>
+                        <small class="form-text text-muted">ex. usuairo@correo.com</small>
                     </div>
                     <div class="form-group">
-                        <label class=" form-control-label">Su descuento es de :</label>
+                        <label class=" form-control-label">Aplicar Descuento</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-tags"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">inf. Obtendra un descuento es sus compras</small>
@@ -127,7 +100,7 @@
     <section class="containerProductos" id="containerProductos">
 
         <div class="col-xs-3 col-sm-3">
-            <div class="card">
+            <div class="card top">
                 <div class="card-header">
                     <strong>Registar</strong> <small> Productos</small>
                 </div>
@@ -136,7 +109,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Serial</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-barcode"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">ex. 4251236589658</small>
@@ -144,7 +117,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Descripción</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-info-circle"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">ex. Televisor</small>
@@ -152,7 +125,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Precio</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-dollar-sign"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">inf. Valor monetario</small>
@@ -160,7 +133,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Stock</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-archive"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">inf. Cantidades</small>
@@ -178,7 +151,7 @@
     <section class="containerInvoice" id="containerInvoice">
   
         <div class="col-xs-3 col-sm-3">
-            <div class="card">
+            <div class="card top">
                 <div class="card-header">
                     <strong>Facturar</strong> <small> con los datos del cliente</small>
                 </div>
@@ -187,7 +160,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Cédula</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-id-card"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">ex. 0123456789</small>
@@ -195,7 +168,7 @@
                     <div class="form-group">
                         <label class=" form-control-label">Serial del producto</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-barcode"></i></div>&nbsp;
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">ex. 4251236589658</small>
@@ -203,7 +176,8 @@
                     <div class="form-group">
                         <label class=" form-control-label">Cantidad</label>
                         <div class="input-group">
-                            <div class="input-group-addon"><i class="fa fa-usd"></i></div>
+                            <div class="input-group-addon"><i class="fa fa-shopping-cart"></i></div>&nbsp;
+
                             <input class="form-control">
                         </div>
                         <small class="form-text text-muted">inf. 1 o mas productos</small>
@@ -220,8 +194,12 @@
 
 </main>
 
-<footer>
-    <p>&copy; 2024 Nombre de tu empresa</p>
+<footer class="footer">
+
+    <div class="container">
+        <span class="text-muted">© 2024 JavicSistem.</span>
+    </div>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
@@ -234,14 +212,25 @@
 <script src="/src/static/scripts/index.js"></script>
 
 <script>
-    function showSection(sectionId) {
-        document.querySelectorAll('main section').forEach(section => {
-            section.style.display = 'none';
-        });
-        document.getElementById(sectionId).style.display = 'block';
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+        const lastSectionId = localStorage.getItem('lastSectionId');
+        showSection(lastSectionId || 'containerClientes');
 
-    showSection('containerClientes');
+        function showSection(sectionId) {
+            document.querySelectorAll('main section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+            localStorage.setItem('lastSectionId', sectionId);
+        }
+
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', function () {
+                const sectionId = this.getAttribute('data-section-id');
+                showSection(sectionId);
+            });
+        });
+    });
 </script>
 
 </body>
